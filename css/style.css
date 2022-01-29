@@ -1,12 +1,10 @@
 
 
 :root{ --main-color: #23b347}
-body{
-    font-family: 'Open Sans', sans-serif;
-}
-
+body{ font-family: 'Open Sans', sans-serif; }
 
 /*    -----start lading-page ------ */
+
 .landing-page{
     min-height: 100vh;
     background-image: url("../img/img1.jpg");
@@ -71,17 +69,12 @@ nav .links li a.active{
     transform: translate(-50%, -50%);
     text-align: center;
 }
-.intro-txt h1{
-    font-size: 50px;
-}
-.intro-txt h1 span{
-    color: var(--main-color);
-}
-.intro-txt p{
-    font-size: 20px;
-    line-height: 1.5;
-}
+.intro-txt h1{ font-size: 50px }
+.intro-txt h1 span{color: var(--main-color) }
+.intro-txt p{font-size: 20px; line-height: 1.5 }
 /*    -----end lading-page ------ */
+
+
 
 /*    -----start setting box ------ */
 .sitting-box{
@@ -97,29 +90,21 @@ nav .links li a.active{
 }
 .sitting-box .toggle-cog{
     position: absolute;
-    right: -30px;
+    right: -40px;
     top: 85px;
     font-size: 20px;
     background-color: var(--main-color);
     text-align: center;
     cursor: pointer;
 }
-.sitting-box .toggle-cog .fa-cog{
-    padding: 4px 0;
-    width: 30px;
-}
-.open{
-    left: 0px;
-}
-.sitting-box .setting-container{
-    padding: 20px;
-    
-}
+.sitting-box .toggle-cog .fa-cog{ padding: 8px 0; width: 40px }
+.open{ left: 0px }
+.sitting-box .setting-container{ padding: 20px }
 .sitting-box .option-box{
     margin-top: 65px;
-    background-color: #fff7;
+    background-color: #fff;
     padding: 5px;
-    border: 1px solid #fff;
+    border: 1px solid #000;
 }
 .sitting-box h4{
     color: #000;
@@ -136,14 +121,13 @@ nav .links li a.active{
 .sitting-box .colors-list li{
     width: 25px;
     height: 25px;
-    
     background-color: #000;
     display: inline-block;
     border-radius: 50%;
     cursor: pointer;
-    opacity: .7;
+    opacity: .8;
 }
-.sitting-box .colors-list li.active{ opacity: 1; border: 1px solid #fff;}
+.sitting-box .colors-list li.active{ opacity: 1; border: 2px solid #000;} 
 .sitting-box .colors-list li:first-child{ background-color: #23b347;}
 .sitting-box .colors-list li:nth-child(2){ background-color: #df841b;}
 .sitting-box .colors-list li:nth-child(3){ background-color: #1bdfb5;}
