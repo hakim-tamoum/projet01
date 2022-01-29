@@ -1,41 +1,10 @@
 
 
-:root{ --mainColor: #23b347}
+:root{ --main-color: #23b347}
 body{
     font-family: 'Open Sans', sans-serif;
 }
-/*    -----start setting box ------ */
-.sitting-box{
-    position: fixed;
-    top: 0;
-    left: -250px;
-    width: 250px;
-    min-height: 100vh;
-    background-color: var(--mainColor);
-    opacity: .7;
-    z-index: 3;
-    transition: all .3s ease-in-out;
-}
-.sitting-box .toggle-cog{
-    position: absolute;
-    right: -30px;
-    top: 100px;
-    font-size: 20px;
-    background-color: var(--mainColor);
-    text-align: center;
-    cursor: pointer;
-}
-.sitting-box .toggle-cog .fa-cog{
-    padding: 4px 0;
-    width: 30px;
-}
-.open{
-    left: 0px;
-}
-.sitting-box .setting-container{
-    
-}
-/*    -----end setting box ------ */
+
 
 /*    -----start lading-page ------ */
 .landing-page{
@@ -60,14 +29,15 @@ nav{
     z-index: 2;
     display: flex;
     padding: 5px;
-    background-color: #0006;
-
+    background-color: #0007;
 }
 nav .logo{
     width: 300px;
-    padding: 10px;
+    padding: 20px;
+    padding-left: 0;
     font-size: 30px;
     font-weight: bold;
+    text-align: center;
 }
 nav .links{
     list-style: none;
@@ -89,7 +59,7 @@ nav .links li a{
 }
 nav .links li a:hover,
 nav .links li a.active{
-    color: var(--mainColor);
+    color: var(--main-color);
     transition: .3s;
 }
 .intro-txt{
@@ -105,10 +75,78 @@ nav .links li a.active{
     font-size: 50px;
 }
 .intro-txt h1 span{
-    color: var(--mainColor);
+    color: var(--main-color);
 }
 .intro-txt p{
     font-size: 20px;
     line-height: 1.5;
 }
 /*    -----end lading-page ------ */
+
+/*    -----start setting box ------ */
+.sitting-box{
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    min-height: 100vh;
+    background-color: var(--main-color);
+    opacity: .4;
+    z-index: 3;
+    transition: all .3s ease-in-out;
+}
+.sitting-box .toggle-cog{
+    position: absolute;
+    right: -30px;
+    top: 85px;
+    font-size: 20px;
+    background-color: var(--main-color);
+    text-align: center;
+    cursor: pointer;
+}
+.sitting-box .toggle-cog .fa-cog{
+    padding: 4px 0;
+    width: 30px;
+}
+.open{
+    left: 0px;
+}
+.sitting-box .setting-container{
+    padding: 20px;
+    
+}
+.sitting-box .option-box{
+    margin-top: 65px;
+    background-color: #fff7;
+    padding: 5px;
+    border: 1px solid #fff;
+}
+.sitting-box h4{
+    color: #000;
+    margin: 0;
+    font-size: 20px;
+    padding:0 0 5px 10px;
+}
+.sitting-box .colors-list{
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+.sitting-box .colors-list li{
+    width: 25px;
+    height: 25px;
+    
+    background-color: #000;
+    display: inline-block;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: .7;
+}
+.sitting-box .colors-list li.active{ opacity: 1; border: 1px solid #fff;}
+.sitting-box .colors-list li:first-child{ background-color: #23b347;}
+.sitting-box .colors-list li:nth-child(2){ background-color: #df841b;}
+.sitting-box .colors-list li:nth-child(3){ background-color: #1bdfb5;}
+.sitting-box .colors-list li:nth-child(4){ background-color: #1b59df;}
+.sitting-box .colors-list li:nth-child(5){ background-color: #a81bdf;}
+/*    -----end setting box ------ */

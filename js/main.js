@@ -15,3 +15,13 @@ sittingIcon.onclick = function(){
     this.classList.toggle("fa-spin");
     sittingBox.classList.toggle("open");
 };
+
+// switch colors
+const colorsList = document.querySelectorAll(".colors-list li");
+colorsList.forEach(li => {
+    
+    li.addEventListener("click", (e) => {
+        console.log(e.target.dataset.color);
+        document.documentElement.style.setProperty('--main-color', e.target.dataset.color);
+    });
+});
