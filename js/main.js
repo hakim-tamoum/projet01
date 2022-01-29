@@ -25,7 +25,7 @@ const colorsList = document.querySelectorAll(".colors-list li");
 colorsList.forEach(li => { // forEach = loop
     li.addEventListener("click", (e) => {
         document.documentElement.style.setProperty('--main-color', e.target.dataset.color);
-        localStorage.setItem("option-colors", e.target.dataset.color);// pour local storage
+        localStorage.setItem("option-colors", e.target.dataset.color);// pour 4 - local storage
 
         // 5 - met active sur color click
         e.target.parentElement.querySelectorAll(".active").forEach( element => { //parentElement ça vous dire 'ul'
@@ -40,5 +40,12 @@ colorsList.forEach(li => { // forEach = loop
 let mainLocal = localStorage.getItem("option-colors");
 if (mainLocal !== null){
     document.documentElement.style.setProperty('--main-color', mainLocal);
+
+    document.querySelectorAll(".colors-list li").forEach(element=> {// pour 5 - met active
+        element.classList.remove("active");
+        if(element.dataset.color === mainLocal) {
+            element.classList.add("active")
+        }
+    });
 }
 
