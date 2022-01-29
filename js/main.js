@@ -1,5 +1,4 @@
 // landing-page
-window.onload = function(){
 let landingPage = document.querySelector(".landing-page");
 let imagePage = ["img1.jpg", "img2.jpg", "img3.jpg", "img4.jpg", "img5.jpg"];
 setInterval( ()=> {
@@ -8,4 +7,11 @@ setInterval( ()=> {
     background-image: url('../img/${imagePage[randomNbr]}'); 
     transition: all .9s ease-in-out`
 }, 3000);
+
+// setting-box
+let sittingBox = document.querySelector(".sitting-box");
+let sittingIcon = document.querySelector(".toggle-cog .fa-cog");
+sittingIcon.onclick = function(){
+    this.classList.toggle("fa-spin");
+    sittingBox.classList.toggle("open");
 };
