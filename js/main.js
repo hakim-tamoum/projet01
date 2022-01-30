@@ -1,3 +1,4 @@
+window.onload = function () { 
 // 1 - landing-page
 
 let landingPage = document.querySelector(".landing-page");
@@ -73,3 +74,4 @@ random.forEach(button => { // forEach = loop
         }
     });
 });
+};
