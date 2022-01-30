@@ -2,14 +2,18 @@
 
 let landingPage = document.querySelector(".landing-page");
 let imagePage = ["img1.jpg", "img2.jpg", "img3.jpg", "img4.jpg", "img5.jpg"];
-setInterval( ()=> {
-    let randomNbr = Math.floor(Math.random() * imagePage.length);
-    /*landingPage.style.cssText= `
-    background-image: url('../img/${imagePage[randomNbr]}'); 
-    transition: all .9s ease-in-out`;
-    landingPage.style.backgroundImage = `url('../img/${imagePage[randomNbr]}')`; */
-    landingPage.style.backgroundImage = 'url("img/' + imagePage[randomNbr] + ' ")';
-}, 3000);
+let backgroundRandom = true;
+let backgroundInterval;
+function randomizeImg (){
+    if (backgroundRandom === true){
+        backgroundInterval = setInterval( ()=> {
+            let randomNbr = Math.floor(Math.random() * imagePage.length);
+            //landingPage.style.backgroundImage = 'url("img/' + imagePage[randomNbr] + ' ")';
+            landingPage.style.cssText = 'background-image: url("img/' + imagePage[randomNbr] + ' "); transition: all .9s ease-in-out';
+        }, 3000);
+    }
+}
+randomizeImg ();
 
 // 2 - setting-box
 
@@ -56,10 +60,16 @@ const random = document.querySelectorAll(".random button");
 random.forEach(button => { // forEach = loop
     button.addEventListener("click", (e) => {
 
-        // 5 - met active sur color click
         e.target.parentElement.querySelectorAll(".active").forEach( element => { //parentElement ça vous dire 'ul'
             element.classList.remove("active");
         });
         e.target.classList.add("active");
+        if(e.target.dataset.background === "yes"){
+            backgroundRandom = true;
+            randomizeImg ();
+        }else {
+            backgroundRandom = false;
+            clearInterval(backgroundInterval);
+        }
     });
 });
