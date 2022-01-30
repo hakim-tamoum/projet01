@@ -3,11 +3,12 @@
 let landingPage = document.querySelector(".landing-page");
 let imagePage = ["img1.jpg", "img2.jpg", "img3.jpg", "img4.jpg", "img5.jpg"];
 setInterval( ()=> {
-    let randomNbr = Math.floor(Math.random()* imagePage.length);
+    let randomNbr = Math.floor(Math.random() * imagePage.length);
     /*landingPage.style.cssText= `
     background-image: url('../img/${imagePage[randomNbr]}'); 
-    transition: all .9s ease-in-out`*/
-    landingPage.style.backgroundImage = `url('../img/${imagePage[randomNbr]}')`; 
+    transition: all .9s ease-in-out`;
+    landingPage.style.backgroundImage = `url('../img/${imagePage[randomNbr]}')`; */
+    landingPage.style.backgroundImage = 'url("img/' + imagePage[randomNbr] + ' ")';
 }, 3000);
 
 // 2 - setting-box
@@ -25,7 +26,7 @@ const colorsList = document.querySelectorAll(".colors-list li");
 colorsList.forEach(li => { // forEach = loop
     li.addEventListener("click", (e) => {
         document.documentElement.style.setProperty('--main-color', e.target.dataset.color);
-        localStorage.setItem("option-colors", e.target.dataset.color);// pour 4 - local storage
+        localStorage.setItem("option-box", e.target.dataset.color);// pour 4 - local storage
 
         // 5 - met active sur color click
         e.target.parentElement.querySelectorAll(".active").forEach( element => { //parentElement ça vous dire 'ul'
@@ -37,7 +38,7 @@ colorsList.forEach(li => { // forEach = loop
 
 // 4 - local stotage
 
-let mainLocal = localStorage.getItem("option-colors");
+let mainLocal = localStorage.getItem("option-box");
 if (mainLocal !== null){
     document.documentElement.style.setProperty('--main-color', mainLocal);
 
@@ -49,3 +50,16 @@ if (mainLocal !== null){
     });
 }
 
+// 6 - random background
+
+const random = document.querySelectorAll(".random button");
+random.forEach(button => { // forEach = loop
+    button.addEventListener("click", (e) => {
+
+        // 5 - met active sur color click
+        e.target.parentElement.querySelectorAll(".active").forEach( element => { //parentElement ça vous dire 'ul'
+            element.classList.remove("active");
+        });
+        e.target.classList.add("active");
+    });
+});

@@ -100,16 +100,17 @@ nav .links li a.active{
 .sitting-box .toggle-cog .fa-cog{ padding: 8px 0; width: 40px }
 .open{ left: 0px }
 .sitting-box .setting-container{ padding: 20px }
-.sitting-box .option-colors{
+.sitting-box .option-box{
     margin-top: 17px;
     background-color: #fff;
     padding: 5px;
     border: 1px solid #000;
+    text-align: center;
 }
-.sitting-box h4{
+.sitting-box .option-box h4{
     color: #000;
     margin: 0;
-    font-size: 20px;
+    font-size: 18px;
     padding:0 0 5px 10px;
 }
 .sitting-box .colors-list{
@@ -125,7 +126,6 @@ nav .links li a.active{
     display: inline-block;
     border-radius: 50%;
     cursor: pointer;
-    opacity: .8;
 }
 .sitting-box .colors-list li.active{ opacity: 1; border: 2px solid #000;} 
 .sitting-box .colors-list li:first-child{ background-color: #23b347;}
@@ -133,4 +133,22 @@ nav .links li a.active{
 .sitting-box .colors-list li:nth-child(3){ background-color: #1bdfb5;}
 .sitting-box .colors-list li:nth-child(4){ background-color: #426fcf;}
 .sitting-box .colors-list li:nth-child(5){ background-color: #b244dd;}
+
+.sitting-box .random .yes,
+.sitting-box .random .no{
+    width: 50px;
+    background-color: #444;
+    color: #fff;
+    padding: 4px 0;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 4px;
+    opacity:.8;
+    border-radius: 5px;
+    box-shadow: 3px 3px 2px#0009;
+    border: 2px solid #000;
+    margin: 5px 10px;
+    cursor: pointer;
+}
+.sitting-box .option-box button.active{ opacity: 1; background-color: #030c03; border: 2px solid #fff; box-shadow: -3px -1px 2px#0009, 3px 1px 2px#0009; }
 /*    -----end setting box ------ */
