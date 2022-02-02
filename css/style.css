@@ -1,14 +1,8 @@
 *{  box-sizing: border-box;}
 :root{ --main-color: #23b347}
-.container{
-    width: 1450px;
-    padding: 0 15px;
-    margin: auto;
-}
+.container{ width: 1450px; padding: 0 15px; margin: auto }
 body{ font-family: 'Open Sans', sans-serif }
-
 /*    -----start lading-page ------ */
-
 .landing-page{
     min-height: 100vh;
     background-image: url("../img/img1.jpg");
@@ -157,31 +151,16 @@ nav .links li a.active{
 /*    -----end setting box ------ */
 
 /*   -----start about us ----  */
-.about-us{
-    padding: 50px 0;
-    display: flex;
-}
-.about-us .info-box{
-    flex: 1;
-    padding: 20px;
-}
-.about-us .info-box h2{
-    font-weight: bold;
-    font-size: 30px;
-    color: var(--main-color);
-    
-}
+.about-us{ padding: 50px 0; display: flex }
+.about-us .info-box{ flex: 1; padding: 20px }
+.about-us .info-box h2{ font-weight: bold; font-size: 30px; color: var(--main-color) }
 .about-us .info-box p{
     line-height: 1.8;
     font-size: 20px;
     color: #383838;
     margin: 0;
 }
-.about-us .image-box{
-    flex: 1;
-    text-align: center;
-    padding: 20px;
-}
+.about-us .image-box{ flex: 1; text-align: center; padding: 20px }
 .about-us .image-box img{
     width: 350px;
     background-color: var(--main-color);
@@ -195,3 +174,25 @@ nav .links li a.active{
     opacity: .8;
 }
 /*  ------end about us ------  */
+
+/*  ------start skills ----  */
+.skills{ padding: 50px 0; background-color: #444;}
+.skills .skls{padding: 20px}
+.skills h2{font-weight: bold; font-size: 30px; color: var(--main-color); padding-bottom: 40px;}
+.skills .skills-box{
+    background-color: #fff;
+    display: flex;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.skills .skills-box .skill-name{
+    font-weight: bold;
+    width: 100px;
+    text-align: center;
+    line-height: 30px;
+}
+.skills .skills-box .skill-progress{
+    height: 30px;
+    width: 100%;
+    background-color: #ddd;
+}
