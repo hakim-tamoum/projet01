@@ -195,4 +195,16 @@ nav .links li a.active{
     height: 30px;
     width: 100%;
     background-color: #ddd;
+    position: relative;
+    border-radius: 7px;
+}
+.skills .skills-box .skill-progress span{
+    height: 30px;
+    width: 80%;
+    background-color: var(--main-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
 }
