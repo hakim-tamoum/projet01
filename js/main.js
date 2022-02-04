@@ -82,11 +82,12 @@ window.onscroll = function() {
     let skillsOffsetTop = ourSkills.offsetTop;
     let skillsOuterHeight = ourSkills.offsetHeight;
     let windowHeight = this.innerHeight;
-    let windowScrollTop = this.pageYOffset;
-    if ( windowScrollTop > ( skillsOffsetTop + skillsOuterHeight - windowHeight )){
-        let allskills = document.querySelectorAll(".skills-box .skill-progress span");
-        allskills.forEach( skill => {
-            skill.style.width = skill.dataset.progress;
+    let windowScrollTop = this.scrollY;
+    if ( windowScrollTop > (skillsOffsetTop - .5 * skillsOuterHeight) ) {
+        let allSkills = document.querySelectorAll(".skills-box .skill-progress span");
+        allSkills.forEach(skill => {
+            skill.style.width = skill.dataset.progresse; 
         });
     }
 };
+//(skillsOffsetTop + skillsOuterHeight - windowHeight)
