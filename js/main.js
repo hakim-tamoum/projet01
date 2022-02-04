@@ -82,7 +82,7 @@ window.onscroll = function() {
     let skillsOffsetTop = ourSkills.offsetTop;
     let skillsOuterHeight = ourSkills.offsetHeight;
     let windowHeight = this.innerHeight;
-    let windowScrollTop = this.scrollY;
+    let windowScrollTop = this.scrollY; // this.pageYOffsetTop
     if ( windowScrollTop > (skillsOffsetTop - .5 * skillsOuterHeight) ) {
         let allSkills = document.querySelectorAll(".skills-box .skill-progress span");
         allSkills.forEach(skill => {
@@ -91,3 +91,4 @@ window.onscroll = function() {
     }
 };
 //(skillsOffsetTop + skillsOuterHeight - windowHeight)
+//  لما تسحب ويكون مساحة السحب اكبر من ( المساحة من اول الصفحة فوق لحد بداية سيكشن المهارات + مساحة سكشن المهارات ذاته كله - مساحة الجزء اللي ظاهر لك من المتصفح نفسه )
