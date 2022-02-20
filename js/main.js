@@ -92,3 +92,45 @@ window.onscroll = function() {
 };
 //(skillsOffsetTop + skillsOuterHeight - windowHeight)
 //  لما تسحب ويكون مساحة السحب اكبر من ( المساحة من اول الصفحة فوق لحد بداية سيكشن المهارات + مساحة سكشن المهارات ذاته كله - مساحة الجزء اللي ظاهر لك من المتصفح نفسه )
+
+
+const btn = document.querySelector('.btn-open');
+const allItems = document.querySelectorAll('.items');
+const ligne = document.querySelector('.ligne');
+
+
+btn.addEventListener('click', () => {
+
+    btn.classList.toggle('activ')
+    ligne.classList.toggle('activ-ligne');
+
+    allItems.forEach(item => {
+
+        item.classList.toggle('apparition')
+
+        if(item.classList.contains('apparition') === true){
+
+            setTimeout(() => {
+                item.classList.toggle('real');
+            }, 200)
+
+        } else {
+            item.classList.toggle('real');
+        }
+
+    })
+
+})
+
+allItems.forEach(item => {
+    item.addEventListener('click', () => {
+
+        btn.classList.toggle('activ');
+        ligne.classList.toggle('activ-ligne');
+
+        allItems.forEach(item => {
+            item.classList.toggle('real')
+            item.classList.toggle('apparition')
+        })
+    })
+})
