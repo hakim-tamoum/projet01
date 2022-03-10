@@ -134,3 +134,8 @@ allItems.forEach(item => {
         })
     })
 })
+
+let evt = document.querySelector(".btn li");
+evt.onclick = function(){
+    evt.style.background = "red";
+}

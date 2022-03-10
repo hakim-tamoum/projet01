@@ -535,7 +535,7 @@ transform: rotateX(-90deg);
     padding-bottom: 20px;
 }
 .grid .btn ul{
-    
+    cursor: pointer;
 }
 .grid .btn li{
     display: inline-block;
@@ -564,7 +564,8 @@ transform: rotateX(-90deg);
     text-align: center;
 }
 .grid .cdr .divise p{
-
+    text-align: center;
+    padding-top: 10px;
 }
 /* end grid  */
 /* footer */
