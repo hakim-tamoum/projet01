@@ -582,7 +582,7 @@ transform: rotateX(-90deg);
 .grid-images ul , li{
 	list-style: none;
 	padding: 0;
-	margin: 3px;
+    margin: 3px;
 }
 .grid-images .grid-wrap{
 	position: relative;
@@ -599,6 +599,7 @@ transform: rotateX(-90deg);
 }
 .grid-images .grid-wrap ul li{
 	position: relative;
+    box-shadow: 4px 4px 3px #444;
 }
 .grid-images .grid-wrap ul li:nth-child(1){
 	grid-row: span 2;
