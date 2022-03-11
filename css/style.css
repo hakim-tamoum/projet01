@@ -596,7 +596,6 @@ transform: rotateX(-90deg);
 	justify-content: center;
 	margin: 0 auto;
 	padding: 0;
-    border: 2px solid #000;
 }
 .grid-images .grid-wrap ul li{
 	position: relative;
