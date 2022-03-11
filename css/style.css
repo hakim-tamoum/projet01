@@ -555,7 +555,7 @@ transform: rotateX(-90deg);
 .grid .cdr .divise{
     height: 100px;
     width: 100%;
-    background-color: #000;
+    background-image: url('../img/img1.jpg');
     color: #fff;
     border-radius: 5px;
     padding: 15px;
