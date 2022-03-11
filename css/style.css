@@ -4,7 +4,7 @@
     padding: 0;
 }
 :root{ --main-color: #23b347}
-.container{ width: 1450px; padding: 0 15px; margin: auto }
+.container{ width: 1300px; padding: 0 15px; margin: auto }
 body{ font-family: 'Open Sans', sans-serif }
 /*    -----start btn-open ------ */
 .pp{margin: 0;}
@@ -215,7 +215,7 @@ nav .links li a.active{
     text-align: center;
     cursor: pointer;
 }
-.sitting-box .toggle-cog .fa-cog{ padding: 8px 0; width: 40px }
+.sitting-box .toggle-cog .fa-cog{ padding: 8px 0; width: 40px; cursor: pointer; }
 .open{ left: 0px }
 .sitting-box .setting-container{ padding: 20px }
 .sitting-box .option-box{
